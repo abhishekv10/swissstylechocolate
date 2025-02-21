@@ -1,0 +1,360 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  background-image: url(images/body-bg.jpg);
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  background: white;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 15px;
+  font-size: 14px;
+}
+.hero {
+  text-align: center;
+  background: url("image.png") no-repeat center;
+  background-size: cover;
+  padding: 0 150px;
+  color: #ff2333;
+}
+.hero h1 {
+  font-size: 110px;
+  font-weight: bold;
+  /* font-family: "Roboto Serif", serif; */
+}
+span.red {
+  z-index: -2;
+  position: absolute;
+  left: 32%;
+  text-align: center;
+  letter-spacing: 30px;
+  font-size: 135px;
+  font-weight: 900;
+  top: 10%;
+}
+span.red3 {
+  text-align: center;
+  font-size: 125px;
+  font-weight: 900;
+  color: #ff2333;
+}
+span.red1 {
+  z-index: -2;
+  position: absolute;
+  left: 32%;
+  letter-spacing: 15px;
+  font-size: 85px;
+  top: 80%;
+  font-weight: 900;
+}
+.hero h1 span.white {
+  color: white;
+  font-size: 245px;
+  font-weight: 900;
+  position: absolute;
+  top: 26%;
+  left: 31%;
+  filter: drop-shadow(2px 2px 4px black);
+}
+.content {
+  text-align: center;
+  padding: 50px;
+  /* background: #f2f2f2; */
+  position: relative;
+  display: flex
+;
+}
+.content h2 {
+  font-size: 36px;
+  color: #000;
+  float: left;
+}
+.content p {
+  font-size: 18px;
+  color: black;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.content img {
+  max-width: 400px;
+  margin-top: 20px;
+  margin-bottom: -90px;
+  float: left;
+}
+img.head {
+  height: 15vh;
+  top: 0;
+}
+
+.footer {
+  background: #ff2333;
+  height: 200px;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  .content h2 {
+    font-size: 28px;
+  }
+  .content p {
+    font-size: 16px;
+  }
+}
+
+.container {
+  position: relative;
+  margin-top: 100px;
+}
+.container img {
+  display: block;
+  width: 100%;
+}
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: "Montserrat", "sans-serif";
+  height: 100px;
+  background-color: none;
+  padding: 0 5%;
+}
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  display: none;
+}
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+  display: flex;
+}
+nav .links a {
+  display: block;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+nav .links a:hover {
+  color: #ff2333;
+}
+nav .links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fe2333;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+nav .links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+  color: white;
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  nav .links a {
+    font-size: 20px;
+  }
+  nav :checked ~ .links {
+    bottom: 0;
+  }
+  nav .icon-burger {
+    display: block;
+  }
+  nav :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+  nav :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}
+img.bnn {
+  position: absolute;
+  left: 32%;
+  z-index: -1;
+  top: 25%;
+  filter: drop-shadow(2px 4px 6px black);
+}
+i.fa-solid.fa-arrow-left {
+  position: absolute;
+  left: 25%;
+  top: 51%;
+  font-size: 30px;
+  color: black;
+}
+i.fa-solid.fa-arrow-right {
+  position: absolute;
+  right: 20%;
+  top: 51%;
+  font-size: 30px;
+  color: black;
+}
+#pagination {
+  /* position: fixed; */
+  top: 50%;
+  transform: translateY(90%);
+  left: 150px;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin: 40px 0;
+    background: #fff;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    transition: all 0.2s ease;
+
+    a:hover {
+      color: red !important;
+  }
+
+    &:hover {
+      transform: scale(1.5);
+      
+    }
+  }
+
+  a {
+    position: absolute;
+    text-decoration: none;
+    left: 0;
+    top: 0;
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    font-weight: 800;
+  }
+}
+span.side {
+  position: absolute;
+  top: 20%;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-size: 12px;
+  letter-spacing: 12px;
+  left: 50px;
+  color: black;
+}
+span.side1 {
+  position: absolute;
+  top: 20%;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-size: 12px;
+  letter-spacing: 12px;
+  right: 50px;
+  color: black;
+}
+.social i {
+  color: #ff2333;
+  font-size: 20px;
+}
+span.aboutside {
+  position: absolute;
+  top: 30%;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-size: 12px;
+  letter-spacing: 12px;
+  left: 250px;
+  color: black;
+}
+i.fa-solid.fa-plus {
+  font-size: 14px;
+}
+img.upar {
+  position: absolute;
+  top: -18px;
+  height: 15vh;
+  left: 13%;
+}
+i.fa-solid.fa-plus.one {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  font-size: 25px;
+  font-weight: 900;
+  color: #ff2333;
+}
+img.contimg1 {
+  position: absolute;
+  left: -180px;
+  top: 35%;
+  opacity: 0.7;
+}
