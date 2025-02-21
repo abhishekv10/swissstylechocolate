@@ -69,8 +69,7 @@ span.red1 {
   padding: 50px;
   /* background: #f2f2f2; */
   position: relative;
-  display: flex
-;
+  display: flex;
 }
 .content h2 {
   font-size: 36px;
@@ -78,10 +77,10 @@ span.red1 {
   float: left;
 }
 .content p {
-  font-size: 18px;
-  color: black;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 16px;
+    color: black;
+    max-width: 350px;
+    margin: 0 20px;
 }
 .content img {
   max-width: 400px;
@@ -282,11 +281,10 @@ i.fa-solid.fa-arrow-right {
 
     a:hover {
       color: red !important;
-  }
+    }
 
     &:hover {
       transform: scale(1.5);
-      
     }
   }
 
@@ -335,6 +333,16 @@ span.aboutside {
   left: 250px;
   color: black;
 }
+span.aboutside1 {
+  position: absolute;
+  top: 60%;
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  font-size: 12px;
+  letter-spacing: 12px;
+  right: 250px;
+  color: black;
+}
 i.fa-solid.fa-plus {
   font-size: 14px;
 }
@@ -357,4 +365,23 @@ img.contimg1 {
   left: -180px;
   top: 35%;
   opacity: 0.7;
+}
+img.contimg2 {
+  position: absolute;
+  right: 0px;
+  top: -70px;
+  opacity: 0.9;
+  z-index: -1;
+}
+i.fa-solid.fa-computer-mouse.why {
+  position: absolute;
+  top: 98%;
+  font-size: 25px;
+  color: black;
+}
+i.fa-solid.fa-arrow-down-long.why {
+  position: absolute;
+  top: 103%;
+  font-size: 25px;
+  color: black;
 }
