@@ -24,6 +24,8 @@ header nav a {
   background-size: cover;
   padding: 0 150px;
   color: #ff2333;
+  width: fit-content;
+  margin-bottom: 18%;
 }
 .hero h1 {
   font-size: 110px;
@@ -78,9 +80,9 @@ span.red1 {
 }
 .content p {
   font-size: 16px;
-    color: black;
-    max-width: 350px;
-    margin: 0 20px;
+  color: black;
+  max-width: 350px;
+  margin: 0 20px;
 }
 .content img {
   max-width: 400px;
@@ -107,6 +109,56 @@ img.head {
   .content p {
     font-size: 16px;
   }
+  ul#pagination {
+    display: none;
+  }
+  section.hero {
+    margin: 310px 0px;
+  }
+  i.fa-solid.fa-arrow-left {
+    display: none;
+  }
+  i.fa-solid.fa-arrow-right {
+    display: none;
+  }
+  img.bnn {
+    left: 20% !important;
+  }
+  h1 span.white {
+    font-size: 200px !important;
+  }
+  span.red1 {
+    top: 90%;
+    left: 28%;
+  }
+  span.side1 {
+    right: 110% !important;
+}
+.icon.why {
+  display: none;
+}
+section.content {
+  display: inline-flex;
+  width: 100%;
+}
+img.contimg1 {
+  display: none;
+}
+img.contimg2 {
+  display: none;
+}
+.sec3 {
+  width: 100% !important;
+}
+.sec2 {
+  width: 125% !important;
+}
+.sec1 {
+  display: none;
+}
+.footer {
+  display: none;
+}
 }
 
 .container {
@@ -196,7 +248,7 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: #fff;
+  background-color: #000;
   margin: 5px;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
@@ -219,7 +271,7 @@ nav .icon-burger .line {
     height: auto;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(255 255 255 / 77%);
     overflow: hidden;
     transition: all 0.5s ease-in-out;
   }
@@ -373,7 +425,16 @@ img.contimg2 {
   opacity: 0.9;
   z-index: -1;
 }
-i.fa-solid.fa-computer-mouse.why {
+.why {
+  position: absolute;
+  top: 98%;
+  font-size: 40px;
+  color: black;
+  display: grid;
+  gap: 20px;
+  left: 50%;
+}
+/* i.fa-solid.fa-computer-mouse.why {
   position: absolute;
   top: 98%;
   font-size: 25px;
@@ -384,4 +445,4 @@ i.fa-solid.fa-arrow-down-long.why {
   top: 103%;
   font-size: 25px;
   color: black;
-}
+} */
